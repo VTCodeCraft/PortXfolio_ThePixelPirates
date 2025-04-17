@@ -1121,17 +1121,6 @@ main {
 /*-----------------------------------*\
   #CONTACT
 \*-----------------------------------*/
-
-.mapbox {
-  position: relative;
-  height: 250px;
-  width: 100%;
-  border-radius: 16px;
-  margin-bottom: 30px;
-  border: 1px solid var(--jet);
-  overflow: hidden;
-}
-
 .contact-form { 
   padding-top: 30px;
   margin-bottom: 10px;
@@ -1170,7 +1159,7 @@ main {
 textarea.form-input {
   width: 500px;
   min-height: 100px;
-  height: 120px;
+  height: 200px;
   max-height: 200px;
   resize: vertical;
   margin-bottom: 25px;
