@@ -14,6 +14,78 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
+  // const text = "Ahoy! Welcome to Our Creative Realm 🏴‍☠️";
+  // let i = 0;
+
+  // function typeWriter() {
+  //   const typedText = document.getElementById("typed-text");
+
+  //   if (i < text.length) {
+  //     typedText.innerHTML += text.charAt(i);
+  //     i++;
+  //     setTimeout(typeWriter, 120); // typing speed
+  //   } else {
+  //     // Done typing, fade out preloader after a pause
+  //     setTimeout(() => {
+  //       const preloader = document.getElementById("preloader");
+  //       const content = document.getElementById("main-content");
+
+  //       preloader.style.opacity = "0";
+  //       setTimeout(() => {
+  //         preloader.style.display = "none";
+  //         content.style.display = "block";
+  //       }, 1000);
+  //     }, 1000);
+  //   }
+  // }
+
+  // window.addEventListener("load", typeWriter);
+
+  const texts = [
+    "Ahoy! Welcome to Our Creative Realm 🏴‍☠️",
+    "The Pixel Pirates"
+  ];
+
+  let i = 0; // character index
+  let j = 0; // line index
+  const speed = 100;
+  const delayBetweenLines = 1000; // pause between lines
+
+  const typedText = document.getElementById("typed-text");
+
+  function typeNextLine() {
+    if (j >= texts.length) {
+      // All lines typed → fade out preloader
+      setTimeout(() => {
+        const preloader = document.getElementById("preloader");
+        const content = document.getElementById("main-content");
+
+        preloader.style.opacity = "0";
+        setTimeout(() => {
+          preloader.style.display = "none";
+          content.style.display = "block";
+        }, 1000);
+      }, 500);
+      return;
+    }
+
+    if (i < texts[j].length) {
+      typedText.textContent += texts[j].charAt(i);
+      i++;
+      setTimeout(typeNextLine, speed);
+    } else {
+      // Finished current line
+      j++;
+      i = 0;
+      setTimeout(() => {
+        typedText.textContent = ""; // Clear text before next line
+        typeNextLine();
+      }, delayBetweenLines);
+    }
+  }
+
+  window.addEventListener("load", typeNextLine);
+
 
 
 // testimonials variables
