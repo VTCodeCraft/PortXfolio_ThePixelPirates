@@ -81,6 +81,89 @@ li { list-style: none; }
 
 img, ion-icon, a, button, time, span { display: block; }
 
+body {
+  margin: 0;
+}
+
+.stars {
+  width: 2.5px;
+  height: 2.5px;
+  background: transparent;
+  box-shadow: 
+    10vw 20vh #fff, 20vw 80vh #fff, 30vw 40vh #fff,
+    40vw 10vh #fff, 50vw 70vh #fff, 60vw 20vh #fff,
+    70vw 90vh #fff, 80vw 50vh #fff, 90vw 30vh #fff;
+  animation: twinkle 2s infinite ease-in-out alternate;
+  position: absolute;
+}
+
+@keyframes twinkle {
+  0% {
+    box-shadow:
+      10vw 20vh #ffffff44, 20vw 80vh #ffffff33, 30vw 40vh #ffffff22,
+      40vw 10vh #ffffff44, 50vw 70vh #ffffff33, 60vw 20vh #ffffff22,
+      70vw 90vh #ffffff44, 80vw 50vh #ffffff33, 90vw 30vh #ffffff22;
+  }
+  100% {
+    box-shadow:
+      10vw 20vh #fff, 20vw 80vh #fff, 30vw 40vh #fff,
+      40vw 10vh #fff, 50vw 70vh #fff, 60vw 20vh #fff,
+      70vw 90vh #fff, 80vw 50vh #fff, 90vw 30vh #fff;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', monospace;
+  color: #ffd98a;
+  font-size: 4rem;
+  text-shadow:
+    2px 2px #c36b00,
+    4px 4px #8b4500,
+    0 0 10px #ffaa00;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow:
+      1px 1px #c36b00,
+      2px 2px #8b4500,
+      0 0 5px #ffaa00;
+  }
+  100% {
+    text-shadow:
+      2px 2px #c36b00,
+      4px 4px #8b4500,
+      0 0 15px #ffaa00;
+  }
+}
+
+.intro {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+
+
 button {
   font: inherit;
   background: none;

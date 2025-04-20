@@ -41,6 +41,16 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
   // window.addEventListener("load", typeWriter);
 
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('.intro').style.opacity = 0;
+      setTimeout(() => {
+        document.querySelector('.intro').style.display = 'none';
+        document.querySelector('#main-content').style.display = 'block';
+      }, 1000); // Match fade time
+    }, 3000); // Show intro for 3 seconds
+  });
   const texts = [
     "Ahoy! Welcome to Our Creative Realm 🏴‍☠️",
     "The Pixel Pirates"
