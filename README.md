@@ -7,7 +7,7 @@ This project is created as part of a hackathon challenge to build an **outstandi
 ## 🔗 Live Demo
 
 🚀 Check out the live version on Vercel:  
-**[https://pixel-pirates.vercel.app](https://pixel-pirates.vercel.app)**  
+**[https://pixel-pirates.vercel.app](https://pixel-pirates-omega.vercel.app/)**  
 
 ---
 
